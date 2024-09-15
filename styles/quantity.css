@@ -1,0 +1,40 @@
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+}
+
+.dec-button, .inc-button{
+    flex: 1;
+    border: 2px solid #c6c6c6;
+    margin-left: 8px;
+    margin-right: 8px;
+    transition: box-shawdow 0.2s;
+    cursor: pointer;
+}
+
+.dec-button:hover, .inc-button:hover{
+    background-color: lightblue;
+    border-color: black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.dec-button:active, .inc-button:active{
+    background-color: #c6c6c6;
+}
+
+.input-field{
+    flex: 1;
+    height: 22px;
+    border: 2px solid rgb(70, 70, 70);
+    background-color: #ED7D31;
+    text-align: center;
+    border-radius: 5px;
+}
