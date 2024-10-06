@@ -1,5 +1,5 @@
 1. Công nghệ sử dung:
-- panda, sklearn
+- pandas, sklearn
 
 2. Thuật toán: Gaussian Naive Bayes
 - Gaussian Naive Bayes là một thuật toán phân loại nhanh, giả sử các đặc điểm tuân theo phân phối chuẩn và áp dụng Định lý Bayes để dự đoán lớp có khả năng xảy ra nhất.
