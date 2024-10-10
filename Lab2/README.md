@@ -8,6 +8,6 @@ Thuật toán: Multinomial Naive Bayes
 3.
   Câu 1:
   ![image](https://github.com/user-attachments/assets/43f69672-dba8-4da7-b809-302429537153)
-
   Câu 2:
+  
   ![image](https://github.com/user-attachments/assets/53f55a10-74ea-4954-843c-67e35f6ecd1e)
