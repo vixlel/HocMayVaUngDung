@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán thuốc</title>
+</head>
+<body>
+    <h1>Drug Prescription Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br><br>
+
+        <label for="sex">Sex (M/F):</label>
+        <input type="text" id="sex" name="sex"><br><br>
+
+        <label for="bp">BP (HIGH/LOW/NORMAL):</label>
+        <input type="text" id="bp" name="bp"><br><br>
+
+        <label for="cholesterol">Cholesterol (HIGH/NORMAL):</label>
+        <input type="text" id="cholesterol" name="cholesterol"><br><br>
+
+        <label for="na_to_k">Na-to-K:</label>
+        <input type="text" id="na_to_k" name="na_to_k"><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Predicted Drug: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
