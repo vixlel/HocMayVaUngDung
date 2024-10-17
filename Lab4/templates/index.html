@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Prediction</title>
+</head>
+<body>
+    <h1>Drug Prediction with Decision Tree and Random Forest</h1>
+    <form action="/predict" method="POST">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br>
+
+        <label for="bp">BP:</label>
+        <select id="bp" name="bp" required>
+            <option value="HIGH">High</option>
+            <option value="NORMAL">Normal</option>
+            <option value="LOW">Low</option>
+        </select><br>
+
+        <label for="cholesterol">Cholesterol:</label>
+        <select id="cholesterol" name="cholesterol" required>
+            <option value="HIGH">High</option>
+            <option value="NORMAL">Normal</option>
+        </select><br>
+
+        <label for="na_to_k">Na to K Ratio:</label>
+        <input type="number" step="any" id="na_to_k" name="na_to_k" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if decision_tree_result %}
+        <h2>Decision Tree Prediction: {{ decision_tree_result }}</h2>
+    {% endif %}
+
+    {% if random_forest_result %}
+        <h2>Random Forest Prediction: {{ random_forest_result }}</h2>
+    {% endif %}
+</body>
+</html>
