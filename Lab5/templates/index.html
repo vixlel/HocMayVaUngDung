@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVM Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .model {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 45%; /* Adjust the width as needed */
+        }
+        img {
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>SVM Model Results</h1>
+
+    <div class="container">
+        <!-- Hard Margin Section -->
+        <div class="model">
+            <h2>Hard Margin SVM</h2>
+            <p><strong>Weights (w):</strong> {{ hard_w }}</p>
+            <p><strong>Bias (b):</strong> {{ hard_b }}</p>
+            <p><strong>Lagrange Multipliers (λ):</strong></p>
+            <ul>
+                {% for l in hard_lamb %}
+                    <li>{{ l }}</li>
+                {% endfor %}
+            </ul>
+            <img src="{{ hard_margin_image }}" alt="Hard Margin Plot" />
+        </div>
+
+        <!-- Soft Margin Section -->
+        <div class="model">
+            <h2>Soft Margin SVM</h2>
+            <p><strong>Weights (w):</strong> {{ soft_w }}</p>
+            <p><strong>Bias (b):</strong> {{ soft_b }}</p>
+            <p><strong>Slack Variables:</strong></p>
+            <ul>
+                {% for s in soft_slack %}
+                    <li>{{ s }}</li>
+                {% endfor %}
+            </ul>
+            <img src="{{ soft_margin_image }}" alt="Soft Margin Plot" />
+        </div>
+    </div>
+</body>
+</html>
